@@ -23,7 +23,7 @@ public class User {
     //Uni directional mapping
     //User is parent wrt Country
      @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
-     private Country country;
+     private Country originalCountry;
 
 
     // Bidirectional mapping
@@ -87,12 +87,12 @@ public class User {
         this.connected = connected;
     }
 
-    public Country getCountry() {
-        return country;
+    public Country getOriginalCountry() {
+        return originalCountry;
     }
 
-    public void setCountry(Country country) {
-        this.country = country;
+    public void setOriginalCountry(Country originalCountry) {
+        this.originalCountry = originalCountry;
     }
 
     public List<Connection> getConnectionList() {

@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
                 break;
         }
         country.setUser(user);
-        user.setCountry(country);
+        user.setOriginalCountry(country);
         user.setConnected(false);
         user.setMaskedIp(null);
 
